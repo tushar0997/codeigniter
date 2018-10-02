@@ -89,6 +89,13 @@ class User extends CI_Controller {
 	{
 		$this->load->view('login');	
 	}
+	public function showdata()
+	{
+
+		$data['showdata'] = $this->Model->join_table("reg","city","reg.city = city.city_id");
+		$this->load->view('showdata',$data);
+		
+	}
 	public function loginpro()
 	{
 		$data['email'] = $this->input->post('email');
