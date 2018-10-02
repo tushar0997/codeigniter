@@ -31,6 +31,7 @@ Class Model extends CI_Model
 		$r = $this->db->get();
 		return $r->result();
 	}
+	
 	function count_all()
 	{
 		return $this->db->count_all_results('reg');
