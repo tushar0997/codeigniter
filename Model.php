@@ -31,6 +31,14 @@ Class Model extends CI_Model
 		$r = $this->db->get();
 		return $r->result();
 	}
+	public function join_table($table1,$table2,$con)
+	{
+		$this->db->select('*');
+		$this->db->from($table1);
+		$this->db->join($table2,$con);
+		$r = $this->db->get();
+		return $r->result();
+	}
 	
 	function count_all()
 	{
