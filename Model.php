@@ -4,10 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 Class Model extends CI_Model
 {
-	function __construct()
-	{
-
-	}
 	function insert($table,$data)
 	{
 		return $this->db->insert($table,$data);
